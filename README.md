@@ -1,6 +1,6 @@
 ## Training
 
-To train the model open terminal in `api` directory and write command `python trainig_v1.py`.
+To train the model open terminal in `api` directory and write command `python training_v1.py`.
 
 It seeks for `data_v1.xlsx` file in `api/data` directory.
 

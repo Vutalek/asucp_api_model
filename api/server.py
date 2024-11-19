@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from flask import Flask, jsonify, request, json
-import dill
+import dill as pickle
 
 app = Flask(__name__)
 
@@ -25,7 +25,7 @@ def apicall():
         print("Loading model.")
         model = None
         with open("./models/" + regressor, "rb") as file:
-            model = dill.load(file)
+            model = pickle.load(file)
         print("Model loaded.")
         print("Making prediction.")
         predictions = model.predict(data)

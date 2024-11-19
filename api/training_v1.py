@@ -13,7 +13,7 @@ data_path = "./data/data_v1.xlsx"
 model_path = "./models/model_v1.pk"
 
 def train():
-    data = pd.read_excel(data_path, parse_dates = ["Дата"], engine = "openpyxl")
+    data = pd.read_excel(data_path, parse_dates = ["Дата"], date_format = "%d.%m.%Y", engine = "openpyxl")
 
     X = data.copy()
     X = X.drop("Количество товара", axis = 1)

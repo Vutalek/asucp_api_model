@@ -22,4 +22,5 @@ Required python packages:
 - numpy;
 - scikit-learn 1.5.2;
 - dill;
-- Flask.
+- Flask;
+- waitress.

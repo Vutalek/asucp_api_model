@@ -11,7 +11,7 @@ def apicall():
     try:
         json_data = json.loads(request.data)
         data = pd.DataFrame()
-        data["Дата"] = pd.date_range(pd.to_datetime(json_data["startDate"]), pd.to_datetime(json_data["endDate"])-pd.Timedelta(days = 1), freq = "d")
+        data["Дата"] = pd.date_range(pd.to_datetime(json_data["startDate"], format = "%Y-%d-%m"), pd.to_datetime(json_data["endDate"], format = "%Y-%d-%m")-pd.Timedelta(days = 1), freq = "d")
         data["Товар"] = json_data["product"]
         data["Склад"] = json_data["warehouseId"]
     except Exception as e:

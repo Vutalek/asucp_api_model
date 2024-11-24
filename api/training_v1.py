@@ -110,7 +110,7 @@ class Ceil(BaseEstimator, TransformerMixin):
         return y
 
     def inverse_transform(self, y):
-        return np.ceil(y)
+        return np.int64(np.ceil(y))
         
 if __name__ == "__main__":
     print("Start training.")

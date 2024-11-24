@@ -29,7 +29,7 @@ def apicall():
         print("Model loaded.")
         print("Making prediction.")
         predictions = model.predict(data)
-        prediction = np.sum(predictions)
+        prediction = int(np.sum(predictions))
         
         print("Send prediction.")
         response = jsonify(prediction = prediction)
